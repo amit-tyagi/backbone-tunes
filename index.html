@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>HTML-5 Application</title>
+
+		<script type="text/javascript" src="js/libs/jquery-1.10.2.min.js"></script>	
+		<script type="text/javascript" src="js/libs/underscore-1.5.1.min.js"></script>	
+		<script type="text/javascript" src="js/libs/backbone-1.0.0.min.js"></script>	
+		<script type="text/javascript" src="js/App.js"></script>	
+		<script type="text/javascript">
+			$(document).ready(function() {
+				console.log("jQuery is ready!!");
+			});
+		</script>
+	</head>
+	<body>
+		<script type="text/template" id="song-list">
+			<ul>
+				<li><%= artist %></li>
+				<li><%= title %></li>
+			</ul>
+		</script>
+
+		<div id="container">
+			<h1>Welcome to HTML 5 Application
+		</div>	
+	</body>
+</html>
