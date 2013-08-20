@@ -1,14 +1,24 @@
 (function($){
-	window.Tunes = Backbone.Model.extend({
+	window.Album = Backbone.Model.extend({
 
 	});
 
-	window.TunesView = Backbone.View.extend({
+	window.Albums = Backbone.Collection.extend({
+		model: Album,
+
+		url: '/albums'
+	});
+
+	window.AlbumView = Backbone.View.extend({
+		tagName: 'li',
+		
+		className: 'album',
+
 		initialize: function() {
 			_.bindAll(this, "render");
-			this.model.on("change", this.render, this);
+			this.model.bind("change", this.render);
 
-			this.template = _.template($('#song-list').html());
+			this.template = _.template($('#album-template').html());
 		},
 
 		render: function() {
